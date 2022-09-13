@@ -20,7 +20,6 @@ function App() {
   useEffect(() => {
     const hash = window.location.hash     //set hash equal to information in url
     let token = window.localStorage.getItem("token")
-
     //If there is no token and there is a url, then get the token from the url
     if (!token && hash) {
       token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
