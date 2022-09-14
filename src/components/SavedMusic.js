@@ -1,5 +1,15 @@
-function SavedMusic () {
-    return <h1 className="page-header">Saved Music</h1>
+import Typewriter from 'typewriter-effect'
+
+function SavedMusic() {
+  return (
+    <div className="saved-music-typewriter-container">
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter.typeString('Saved Music').start()
+        }}
+      />
+    </div>
+  )
 }
 
-export default SavedMusic;
+export default SavedMusic

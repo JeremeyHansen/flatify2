@@ -1,31 +1,40 @@
-import Typewriter from "typewriter-effect";
+import Typewriter from 'typewriter-effect'
 
-function Home () {
-    return (
-        <>
-        <div className="home-container">
-        </div>
-        <img className="background-image" src="https://i.pinimg.com/originals/44/3c/71/443c71b7a6b1e3471c76c4ce02f273c2.gif" alt="Welcome to Flatify"/>
+function Home() {
+  return (
+    <>
+      <div className="home-container">
         <div className="image-typewriter-container">
-            <Typewriter
-                onInit={(typewriter) => {
-                    typewriter
-                    .pauseFor(2000)
-                    .typeString("Hello Flat Iron")
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString("Welcome to Flatify...")
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .typeString("Enjoy.")
-                    .pauseFor(3000)
-                    .deleteAll()
-                    .start();
-                }}
+          <Typewriter
+            onInit={(typewriter) => {
+                typewriter
+                .pauseFor(1000)
+                .typeString("$ console.log('helloworld');")
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString('welcome to flatify.')
+                .pauseFor(2500)
+                .deleteAll()
+                .typeString('time to dance')
+                .pauseFor(500)
+                .typeString(' and sing')
+                .pauseFor(500)
+                .typeString(' and vibe.')
+                .pauseFor(1000)
+                .deleteAll()
+                .typeString('Enjoy.')
+                .start()
+            }}
+          />
+            <img
+              className="earth"
+              src="https://i.gifer.com/5x4Z.gif"
+              alt="Welcome to Flatify"
             />
         </div>
-        </>
-    )
+      </div>
+    </>
+  )
 }
 
-export default Home;
+export default Home

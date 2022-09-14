@@ -13,9 +13,9 @@ function Player({ token, trackUri }){
             magnifySliderOnHover={true}
             uris={trackUri ? [trackUri] : []}
             styles={{
-                activeColor: '#fff',
-                bgColor: '#222',
-                color: '#fff',
+                activeColor: 'black',
+                bgColor: 'black',
+                color: 'black',
                 loaderColor: '#fff',
                 sliderColor: '#ccc',
                 trackArtistColor: '#ccc',

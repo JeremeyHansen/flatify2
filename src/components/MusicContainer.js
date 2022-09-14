@@ -32,7 +32,7 @@ function MusicContainer({ artist, token, sendTracks }){
     }
 
     return (
-    <div>
+    <div className="music-card">
         <ul onClick={handleClick}>
            <h1>{artist.name}</h1>
            <img height="180" src={artist.images.length > 0 ? artist.images[0].url : null} />
