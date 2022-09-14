@@ -1,4 +1,5 @@
 
+
 function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
     function onSong() {
         setPlayMe(savedArrayItem.uri)
@@ -37,6 +38,18 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
             <span>-   -</span>
             <span>-   -</span>
             <button onClick={onDelete}>Delete Song</button>
+        </div>
+    )
+}
+
+=======
+function SavedMusicCard({savedArrayItem}) {
+    return(
+        <div className="saved-music-card">
+            <h1>SONG NAME</h1>
+            <img src="SONG IMAGE"/>
+            <p>ARTIST NAME</p>
+
         </div>
     )
 }
