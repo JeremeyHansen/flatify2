@@ -1,17 +1,23 @@
 import React, { useState } from "react";
 
 function TrackList({ track, setPlayMe }){
-    const [index, setIndex] = useState([]);
+    const [toggle, setToggle] = useState(false);
 
     function handleAdd() {
-        console.log(track.artists[0].id, track.name, track.uri)
-        setIndex([...index, {
-            songName: track.name,
-            songUri: track.uri,
-        }])
-        const songData = {songs:[index]}
-        fetch(`http://localhost:3001/artists/${track.artists[0].id}`, {
-            method: "PATCH",
+        const songData = {
+            id: track.id,
+            track: track.name,
+            uri: track.uri,
+            album: track.album.name,
+            image: track.album.images[2].url,
+            album_uri: track.album.uri,
+            artist: track.artists[0].name,
+            artist_id: track.artists[0].id,
+            artist_uri: track.artists[0].uri,
+            }
+        
+        fetch(`http://localhost:3001/artists`, {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -19,15 +25,24 @@ function TrackList({ track, setPlayMe }){
         })
             .then(res => res.json())
             .then(updatedArtist => console.log(updatedArtist))
+        setToggle(!toggle);
     }
 
+    function onListen(){
+        setPlayMe(track.uri)
+    }
+    
     function playIt() {
         setPlayMe(track.uri)
     }
 
     return (
         <div>
-            <img onClick={playIt} src={track.album.images[2].url}/> {track.name} {track.artists[0].name} <button onClick={handleAdd}>Add Song</button>
+            <img onClick={playIt} src={track.album.images[2].url}/> 
+            {track.name} 
+            {track.artists[0].name} 
+            <button onClick={handleAdd} disabled={toggle ? true : false}>Add Song</button>
+            <button onClick={onListen}>Listen</button>
         </div>
     )
 }

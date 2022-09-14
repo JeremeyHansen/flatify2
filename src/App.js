@@ -39,6 +39,8 @@ function App() {
     window.localStorage.removeItem("token");
   };
 
+  useEffect(() => setPlayMe('spotify:track:6ZFbXIJkuI1dVNWvzJzown'),[])
+
   return (
     <>
       <Navbar />
@@ -56,11 +58,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
-          <Route
-            path="/Music"
-            element={<Music token={userToken} setPlayMe={setPlayMe} />}
-          ></Route>
-          <Route path="/SavedMusic" element={<SavedMusic />}></Route>
+          <Route path="/Music" element={<Music token={userToken} setPlayMe={setPlayMe} />}></Route>
+          <Route path="/SavedMusic" element={<SavedMusic setPlayMe={setPlayMe} />}></Route>
         </Routes>
       </div>
     </>

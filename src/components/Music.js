@@ -7,27 +7,22 @@ export default function Music({ token, setPlayMe }) {
   const [searchKey, setSearchKey] = useState('')
   const [artists, setArtists] = useState([])
   const [handleTracks, setHandleTracks] = useState([])
-  const [savedList, setSavedList] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3001/artists')
-      .then((res) => res.json())
-      .then((data) => setSavedList(data))
-  }, [])
-
-  function searchArtists(e) {
-    e.preventDefault()
-    fetch(
-      `https://api.spotify.com/v1/search?q=${searchKey}&type=artist&include_external=audio&limit=5`,
-      {
+    if(searchKey !== '') {
+      fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=artist&include_external=audio&limit=5`, {
         headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
         },
-      },
-    )
-      .then((res) => res.json())
-      .then((data) => setArtists(data.artists.items))
+      })
+        .then(res => res.json())
+        .then(data => setArtists(data.artists.items))
+    }
+    }, [searchKey])
+
+  function handleInput(e) {
+    setSearchKey(e.target.value)
   }
 
   return (
@@ -42,14 +37,13 @@ export default function Music({ token, setPlayMe }) {
 
       {token ? (
         <div className="form-container">
-        <form onSubmit={searchArtists}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
             className="input-form"
             placeholder="Search Artist"
-            onChange={(e) => setSearchKey(e.target.value)}
+            onInput={handleInput}
           />
-          <button className="input-button" type={'submit'}>Search</button>
         </form>
         </div>
       ) : (
@@ -58,6 +52,7 @@ export default function Music({ token, setPlayMe }) {
 
       <div className="contain">
         <div className="left">
+          <div>Artist</div>
           {artists.map((artist) => (
             <MusicContainer
               key={artist.id}
@@ -68,7 +63,7 @@ export default function Music({ token, setPlayMe }) {
           ))}
         </div>
         <div className="right">
-          <h1>Songs Album</h1>
+          <div className="contain"><span>Songs</span><span className="right-align">Album</span></div>
           {handleTracks.map((track) => (
             <TrackList key={track.id} track={track} setPlayMe={setPlayMe} />
           ))}

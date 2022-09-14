@@ -208,3 +208,26 @@ body {
 
     ;
 }
+
+.contain {
+    width: 100%;
+    color: rgb(99, 99, 99);
+}
+
+.left {
+    width: 17%;
+    min-height: 500px;
+    float: left;
+    color: rgb(99, 99, 99);
+}
+
+.right {
+    width: 75%;
+    float: inline-end;
+    color: rgb(99, 99, 99);
+}
+
+.right-align {
+    float: right;
+    color: rgb(99, 99, 99);
+}
