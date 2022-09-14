@@ -203,6 +203,8 @@ body {
 
 .nav li:hover {
     font-size: 1.4rem;
-    color: #66FF66
+    color: #66FF66;
+    text-shadow: 0px 0px 15px white;
+
     ;
 }
