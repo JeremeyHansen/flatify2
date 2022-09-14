@@ -1,103 +1,32 @@
 {
   "artists": [
     {
-      "id": "3RAFcUBrCNaboRXoP3S5t1",
-      "track": "Psychosocial",
-      "uri": "spotify:track:3RAFcUBrCNaboRXoP3S5t1",
-      "album": "All Hope Is Gone (10th Anniversary)",
-      "image": "https://i.scdn.co/image/ab67616d00004851e7fbc0883149094912559f2c",
-      "album_uri": "spotify:album:2ISXjEm0D4chvU2IDNvUqk",
-      "artist": "Slipknot",
-      "artist_id": "05fG473iIaoy82BF1aGhL8",
-      "artist_uri": "spotify:artist:05fG473iIaoy82BF1aGhL8"
+       "id": "3VqHuw0wFlIHcIPWkhIbdQ",
+      "track": "Enter Sandman (Remastered)",
+      "uri": "spotify:track:3VqHuw0wFlIHcIPWkhIbdQ",
+      "album": "Metallica (Remastered)",
+      "image": "https://i.scdn.co/image/ab67616d000048511f9edf15e43f4c2f4938b869",
+      "album_uri": "spotify:album:55fq75UfkYbGMq4CncCtOH",
+      "artist": "Metallica",
+      "artist_id": "2ye2Wgw4gimLv2eAKyk1NB",
+      "artist_uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB",
+      "track_length": 331560,
+      "explicit": false,
+      "popularity": 77
     },
     {
-      "id": "6MknWxVxaShYEmx2BEaWZk",
-      "track": "Fever Dreams",
-      "uri": "spotify:track:6MknWxVxaShYEmx2BEaWZk",
-      "album": "Fever Dreams",
-      "image": "https://i.scdn.co/image/ab67616d00004851ec08c47bd6c19d636d04782a",
-      "album_uri": "spotify:album:7aDFkcAdT4V8kecsPaZebP",
-      "artist": "Istasha",
-      "artist_id": "5D8TBtxnP5GZm9wUBQ8OTc",
-      "artist_uri": "spotify:artist:5D8TBtxnP5GZm9wUBQ8OTc"
-    },
-    {
-      "id": "3iXNlPQNYPrtimAEM49PsG",
-      "track": "Pump It",
-      "uri": "spotify:track:3iXNlPQNYPrtimAEM49PsG",
-      "album": "Pump It",
-      "image": "https://i.scdn.co/image/ab67616d000048517cefe3aed1a7a3422d5875a6",
-      "album_uri": "spotify:album:2sHDtHAX8luZbP4Uugvtds",
-      "artist": "Electric Callboy",
-      "artist_id": "1WNoKxsp715jez1Td4vthc",
-      "artist_uri": "spotify:artist:1WNoKxsp715jez1Td4vthc"
-    },
-    {
-      "id": "4EFb9FhLyFiDbYKwBwDZre",
-      "track": "We Got the Moves",
-      "uri": "spotify:track:4EFb9FhLyFiDbYKwBwDZre",
-      "album": "We Got the Moves",
-      "image": "https://i.scdn.co/image/ab67616d0000485147f20c3f01aa0c731ac82d23",
-      "album_uri": "spotify:album:3DlJt0IZ2E2YHTdyP9napb",
-      "artist": "Electric Callboy",
-      "artist_id": "1WNoKxsp715jez1Td4vthc",
-      "artist_uri": "spotify:artist:1WNoKxsp715jez1Td4vthc"
-    },
-    {
-      "id": "4qVZBA7jWL23SEWOfKFjiw",
-      "track": "Super Charger Heaven",
-      "uri": "spotify:track:4qVZBA7jWL23SEWOfKFjiw",
-      "album": "Astro Creep: 2000 Songs Of Love, Destruction And Other Synthetic Delusions Of The Electric Head",
-      "image": "https://i.scdn.co/image/ab67616d00004851d2de49f423eb924c79a155d2",
-      "album_uri": "spotify:album:3HugnfabsMODIbxzwxS5xC",
-      "artist": "White Zombie",
-      "artist_id": "0CF71zaDOJWCynIkW9bSK8",
-      "artist_uri": "spotify:artist:0CF71zaDOJWCynIkW9bSK8"
-    },
-    {
-      "id": "1V4Bq9kYHMk9yILUp5z3o3",
-      "track": "Waiting for the End",
-      "uri": "spotify:track:1V4Bq9kYHMk9yILUp5z3o3",
-      "album": "A Thousand Suns",
-      "image": "https://i.scdn.co/image/ab67616d00004851302a793ccd682e6549c91f10",
-      "album_uri": "spotify:album:113yjuFZEqkkbuLi4sEBxo",
-      "artist": "Linkin Park",
-      "artist_id": "6XyY86QOPPrYVGvF9ch6wz",
-      "artist_uri": "spotify:artist:6XyY86QOPPrYVGvF9ch6wz"
-    },
-    {
-      "id": "6nJPHXRpKYv2yqtalEjKy5",
-      "track": "Got the Life",
-      "uri": "spotify:track:6nJPHXRpKYv2yqtalEjKy5",
-      "album": "Follow The Leader",
-      "image": "https://i.scdn.co/image/ab67616d0000485150d216aebaf98e8ac9947fd5",
-      "album_uri": "spotify:album:0gsiszk6JWYwAyGvaTTud4",
+      "id": "1pr9TZGOXeJUggIal1Wq3R",
+      "track": "Blind",
+      "uri": "spotify:track:1pr9TZGOXeJUggIal1Wq3R",
+      "album": "Korn",
+      "image": "https://i.scdn.co/image/ab67616d000048517153b1cf6ee990c2a9fa46cc",
+      "album_uri": "spotify:album:7D3XFJlfZIkmGWqZXm2X8z",
       "artist": "Korn",
       "artist_id": "3RNrq3jvMZxD9ZyoOZbQOD",
-      "artist_uri": "spotify:artist:3RNrq3jvMZxD9ZyoOZbQOD"
-    },
-    {
-      "id": "5HOAWbENF30KH7FPtxjjeP",
-      "track": "Mask",
-      "uri": "spotify:track:5HOAWbENF30KH7FPtxjjeP",
-      "album": "Things That Make You Scream",
-      "image": "https://i.scdn.co/image/ab67616d0000485187eeb2adf34b94ae49a10d3e",
-      "album_uri": "spotify:album:5dTYtWGF5CbXUNlyUboQuU",
-      "artist": "Memory of a Melody",
-      "artist_id": "7MUx5uHwpNCLJzLBhkuKbP",
-      "artist_uri": "spotify:artist:7MUx5uHwpNCLJzLBhkuKbP"
-    },
-    {
-      "id": "1wkPPdTyD9nzDtHZPXiDyB",
-      "track": "Never Enough",
-      "uri": "spotify:track:1wkPPdTyD9nzDtHZPXiDyB",
-      "album": "Blood Spills Not Far From The Wound",
-      "image": "https://i.scdn.co/image/ab67616d00004851fd52933962fe8a2555897885",
-      "album_uri": "spotify:album:4a3ZQtHUomdxx1ZvZgaOJS",
-      "artist": "Aesthetic Perfection",
-      "artist_id": "1Jgp0YCPHCJx5XD7nlfGVN",
-      "artist_uri": "spotify:artist:1Jgp0YCPHCJx5XD7nlfGVN"
+      "artist_uri": "spotify:artist:3RNrq3jvMZxD9ZyoOZbQOD",
+      "track_length": 258266,
+      "explicit": false,
+      "popularity": 68
     }
   ]
 }
