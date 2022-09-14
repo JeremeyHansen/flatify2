@@ -28,11 +28,9 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
             <span>----</span>
             <span>{savedArrayItem.artist}</span>
             <span>----</span>
-            <span>{savedArrayItem.track_length}</span>
+            <span>{Math.round(savedArrayItem.track_length / 60000)} min</span>
             <span>----</span>
-            <span>{savedArrayItem.explicit}</span>
-            <span>----</span>
-            <span>{savedArrayItem.popularity}</span>
+            <span className="song-popularity">{savedArrayItem.popularity}</span>
             <button onClick={onSong}>Play Song</button>
             <span>-   -</span>
             <button onClick={onAlbum}>Play Album</button>
