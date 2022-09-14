@@ -28,7 +28,7 @@ function SavedMusic({ setPlayMe }) {
   });
 
   return (
-    <div>
+    <div className="saved-music-container">
       <div className="saved-music-typewriter-container">
         <Typewriter
           onInit={(typewriter) => {
@@ -36,7 +36,7 @@ function SavedMusic({ setPlayMe }) {
           }}
         />
       </div>
-      <div className="contain">
+      <ul className="contain">
               {sortedMusicArray.map((savedArrayItem) => 
           <SavedMusicCard 
             key={savedArrayItem.id} 
@@ -45,7 +45,7 @@ function SavedMusic({ setPlayMe }) {
             handleDelete={handleDelete}
           />
         )}
-      </div>
+      </ul>
     </div>
   )
 }

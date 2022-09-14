@@ -9,17 +9,20 @@ export default function Music({ token, setPlayMe }) {
   const [handleTracks, setHandleTracks] = useState([])
 
   useEffect(() => {
-    if(searchKey !== '') {
-      fetch(`https://api.spotify.com/v1/search?q=${searchKey}&type=artist&include_external=audio&limit=5`, {
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
+    if (searchKey !== '') {
+      fetch(
+        `https://api.spotify.com/v1/search?q=${searchKey}&type=artist&include_external=audio&limit=5`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
         },
-      })
-        .then(res => res.json())
-        .then(data => setArtists(data.artists.items))
+      )
+        .then((res) => res.json())
+        .then((data) => setArtists(data.artists.items))
     }
-    }, [searchKey])
+  }, [searchKey])
 
   function handleInput(e) {
     setSearchKey(e.target.value)
@@ -37,14 +40,14 @@ export default function Music({ token, setPlayMe }) {
 
       {token ? (
         <div className="form-container">
-        <form onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="text"
-            className="input-form"
-            placeholder="Search Artist"
-            onInput={handleInput}
-          />
-        </form>
+          <form onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="text"
+              className="input-form"
+              placeholder="Search Artist"
+              onInput={handleInput}
+            />
+          </form>
         </div>
       ) : (
         <h2>Please login</h2>
@@ -63,7 +66,10 @@ export default function Music({ token, setPlayMe }) {
           ))}
         </div>
         <div className="right">
-          <div className="contain"><span>Songs</span><span className="right-align">Album</span></div>
+          <div className="contain">
+            <span>Songs</span>
+            <span className="right-align">Album</span>
+          </div>
           {handleTracks.map((track) => (
             <TrackList key={track.id} track={track} setPlayMe={setPlayMe} />
           ))}
