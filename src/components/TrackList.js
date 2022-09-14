@@ -14,6 +14,9 @@ function TrackList({ track, setPlayMe }){
             artist: track.artists[0].name,
             artist_id: track.artists[0].id,
             artist_uri: track.artists[0].uri,
+            track_length: track.duration_ms,
+            explicit: track.explicit,
+            popularity: track.popularity
             }
         
         fetch(`http://localhost:3001/artists`, {
