@@ -1,8 +1,10 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import FlatifyLogo from "./FlatifyLogo.jpg";
 
 function Navbar () {
     return <nav className="nav">
         <Link to="/" className="site-title">Flatify</Link>
+        <img className="logo" src={FlatifyLogo} />
         <ul>
             <CustomLink to="/About">About</CustomLink>
             <CustomLink to="/Music">Music</CustomLink>

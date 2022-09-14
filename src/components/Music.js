@@ -49,7 +49,7 @@ export default function Music({ token, setPlayMe }) {
             placeholder="Search Artist"
             onChange={(e) => setSearchKey(e.target.value)}
           />
-          <button className="input-form"type={'submit'}>Search</button>
+          <button className="input-button" type={'submit'}>Search</button>
         </form>
         </div>
       ) : (
