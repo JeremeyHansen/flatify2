@@ -27,7 +27,12 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
             <span>{savedArrayItem.album}</span>
             <span>----</span>
             <span>{savedArrayItem.artist}</span>
-            <span>-   -</span>
+            <span>----</span>
+            <span>{savedArrayItem.track_length}</span>
+            <span>----</span>
+            <span>{savedArrayItem.explicit}</span>
+            <span>----</span>
+            <span>{savedArrayItem.popularity}</span>
             <button onClick={onSong}>Play Song</button>
             <span>-   -</span>
             <button onClick={onAlbum}>Play Album</button>
