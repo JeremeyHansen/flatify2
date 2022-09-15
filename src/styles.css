@@ -40,6 +40,8 @@ body {
     padding-right: 30px;
     box-shadow: 0px 0px 20px white;
     cursor: pointer;
+    transition: .3s linear;
+
 }
 
 .login-button:hover {
@@ -60,6 +62,40 @@ body {
     opacity: 95%;
 }
 
+.about-text {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    margin-left: 250px;
+    margin-right: 250px;
+    letter-spacing: 5px;
+    background: linear-gradient(to right, hsl(0, 0%, 60%) 0, hsl(0, 0%, 100%) 10%, hsl(0,0%,60%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 7s infinite linear;
+}
+
+.about-text:hover span{
+    margin: 15px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px hsl(0, 0%, 100%), 0 0 20px hsl(0, 0%, 100%), 0 0 40px hsl(0, 0%, 100%);
+}
+
+.about-text span{
+    transition: .5s linear;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+    60%{
+        background-position: 750px;
+    }
+
+}
+
 .about-container {
     text-align: center;
     margin-top: 5%;
@@ -67,13 +103,23 @@ body {
     font-family:'Courier New', Courier, monospace; 
     display: flex;
 }
-.about-container p
 
 .column{
     position:static;
-    margin-left: 6%;
+    margin-left: 2%;
     flex: 10px;
-    padding: 5px;
+    padding: 35px;
+}
+
+.about-image1{
+    margin-right: 100px;
+    width: 80%
+}
+
+.about-image2{
+    margin-left: 100px;
+    width: 80%
+
 }
 
 .image-typewriter-container{
@@ -125,6 +171,8 @@ body {
     margin-right: auto;
     margin-left: auto;
     cursor: pointer;
+    transition: .3s linear;
+
 }
 
 .input-form:hover{
@@ -147,6 +195,8 @@ body {
     margin-left: auto;
     cursor: pointer;
     padding: 7px;
+    transition: .3s linear;
+
 }
 
 .input-button:hover{
@@ -168,6 +218,7 @@ body {
     padding: 0 2rem;
     margin-top: 15px;
     margin-bottom: 15px;
+
 }
 
 .nav ul {
@@ -191,7 +242,10 @@ body {
     font-size: 1.2rem;
     background-color: black;
 }
+.nav li{
+    transition: .3s linear;
 
+}
 .nav li:hover {
     font-size: 1.4rem;
     color: #66FF66;
@@ -243,13 +297,19 @@ body {
     padding-top: 10px;
     padding-left: 3px;
     padding-right: 3px;
-    width: 94%;
-    height: 100%
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 75%;
+    height: 100%;
+    transition: .2s linear;
+
+
 }
 .saved-music-card:hover{
-    padding: 40px;
-    box-shadow: 0px 0px 35px #66FF66;
+    box-shadow: 0px 0px 50px #66FF66;
     background-image: url("https://thumbs.gfycat.com/EvergreenFirsthandHousefly-max-1mb.gif");
+    /* transform: 1.1 ease; */
+    /* transition: all .1s linear; */
 }
 
 .card-buttons {
@@ -264,6 +324,8 @@ body {
     margin: 2.5px;
     cursor: pointer;
     padding: 7px;
+    transition: .3s linear;
+
 }
 
 .card-buttons:hover{
@@ -273,14 +335,19 @@ body {
 }
 
 .music-card-image{
+    margin-top: 20px;
     width:80px;
-    box-shadow: 0px 0px 10px #66FF66;
+    border-style: solid;
+    box-shadow: 0px 0px 10px white;
     overflow: hidden;
-    transition: transform .5s ease;
+    transition: .3s linear;
+
 } 
 
 .music-card-image:hover{
-    transform:scale(1.2);
+    box-shadow: 0px 0px 10px #66FF66;
+    border-color: #66FF66;
+    transform:scale(1.1);
 }
 
 .saved-music-container{

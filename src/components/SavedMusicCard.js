@@ -21,7 +21,9 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
 
     return(
         <li className="saved-music-card">
+            <div className="image-wrapper">
             <img className="music-card-image" src={savedArrayItem.image}/>
+            </div>
             <p className="bold-name"><span className="bold-name-title" >Song: </span>{savedArrayItem.track} </p>
             <p><span className="bold-text">Artist:</span> {savedArrayItem.artist}</p>
             <p className="ellipsis"><span className="bold-text">Album:</span> {savedArrayItem.album} </p>
