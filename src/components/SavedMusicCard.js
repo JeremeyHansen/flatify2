@@ -20,21 +20,17 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
     }
 
     return(
-        <div className="saved-music-card">
-            <img src={savedArrayItem.image}/>
-            <span>{savedArrayItem.track}</span>
-            <span>----</span>
-            <span>{savedArrayItem.album}</span>
-            <span>----</span>
-            <span>{savedArrayItem.artist}</span>
-            <span>-   -</span>
-            <button onClick={onSong}>Play Song</button>
-            <span>-   -</span>
-            <button onClick={onAlbum}>Play Album</button>
-            <span>-   -</span>
-            <span>-   -</span>
-            <button onClick={onDelete}>Delete Song</button>
-        </div>
+        <li className="saved-music-card">
+            <div className="image-wrapper">
+            <img className="music-card-image" src={savedArrayItem.image}/>
+            </div>
+            <p className="bold-name"><span className="bold-name-title" >Song: </span>{savedArrayItem.track} </p>
+            <p><span className="bold-text">Artist:</span> {savedArrayItem.artist}</p>
+            <p className="ellipsis"><span className="bold-text">Album:</span> {savedArrayItem.album} </p>
+            <button className="card-buttons" onClick={onSong}>Play Song</button>
+            <button className="card-buttons" onClick={onAlbum}>Play Album</button>
+            <button className="card-buttons" onClick={onDelete}>Delete Song</button>
+        </li>
     )
 }
 
