@@ -39,12 +39,12 @@ function TrackList({ track, setPlayMe }) {
 
   return (
     <li className="music-list-item">
-      <img height="100px" onClick={playIt} src={track.album.images[0].url} />
-      <span>  {track.name} - {track.artists[0].name}</span>
-      <button className="card-buttons" onClick={handleAdd} disabled={toggle ? true : false}>
-        Add Song
-      </button>
-      <button className="card-buttons" onClick={onListen}>Listen</button>
+      <img className="tracklist-image" height="100px" onClick={playIt} src={track.album.images[0].url} />
+      <span className="music-list-span">  {track.name} - {track.artists[0].name}</span>
+      <span>
+      <button className="music-button1" onClick={handleAdd}>Add Song</button>
+      <button className="music-button2" onClick={onListen}>Listen</button>
+      </span>
     </li>
   )
 }

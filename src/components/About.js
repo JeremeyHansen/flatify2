@@ -20,11 +20,11 @@ function About() {
       </div>
       <p className="about-text">
         The dance floor is in trouble once <span>Tim, Jeremey, and Andy</span> join the
-        party. Who are Tim, Jeremey, and Andy you may ask? They are previous
+        party. Who <span>are</span> Tim, Jeremey, and Andy you may ask? They are previous
         senior devs at Apple and care the brilliant minds behind Flatify. Taking
-        advantage of Spotify's API, they have built an all-in-one music
+        advantage of Spotify's API, they have built <span>an all-in-one</span> music
         streaming platform to search and save all of your favorite songs for
-        when you are ready to boogie.
+        when you are ready to boogie. Install the <span>package</span> and you're set!
       </p>
       <div className="column">
         <img

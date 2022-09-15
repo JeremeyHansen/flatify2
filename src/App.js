@@ -39,7 +39,7 @@ function App() {
     window.localStorage.removeItem("token");
   };
 
-  // useEffect(() => setPlayMe('spotify:track:6ZFbXIJkuI1dVNWvzJzown'),[])
+  useEffect(() => setPlayMe('spotify:track:6ZFbXIJkuI1dVNWvzJzown'),[])
 
   return (
     <>
