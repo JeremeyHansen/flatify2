@@ -2,7 +2,6 @@ import React from "react";
 import SpotifyPlayer from 'react-spotify-web-playback';
 
 function Player({ token, trackUri }){
-
     return(
         <SpotifyPlayer
             token={token}
@@ -10,9 +9,9 @@ function Player({ token, trackUri }){
             magnifySliderOnHover={true}
             uris={trackUri ? [trackUri] : []}
             styles={{
-                activeColor: 'black',
+                activeColor: 'white',
                 bgColor: 'black',
-                color: 'black',
+                color: 'white',
                 loaderColor: '#fff',
                 sliderColor: '#ccc',
                 trackArtistColor: '#ccc',

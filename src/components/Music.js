@@ -7,6 +7,7 @@ export default function Music({ token, setPlayMe }) {
   const [searchKey, setSearchKey] = useState('')
   const [artists, setArtists] = useState([])
   const [handleTracks, setHandleTracks] = useState([])
+  const [show, setShow] = useState("show");
 
   useEffect(() => {
     if (searchKey !== '') {
@@ -25,6 +26,7 @@ export default function Music({ token, setPlayMe }) {
   }, [searchKey])
 
   function handleInput(e) {
+    setShow("show")
     setSearchKey(e.target.value)
   }
 
@@ -54,25 +56,41 @@ export default function Music({ token, setPlayMe }) {
       )}
 
       <div className="contain">
-        <div className="left">
-          <div>Artist</div>
+        <div className={show === "show" ? "show" : "hide"}>
+        <div className="music-typewriter-container">
+        <div className="artist-typewriter">
+        <Typewriter 
+          onInit={(typewriter) => {
+            typewriter.typeString('Artists').start()
+          }}
+        />
+        </div>
+      </div>
           {artists.map((artist) => (
             <MusicContainer
               key={artist.id}
               artist={artist}
               token={token}
               sendTracks={setHandleTracks}
+              setShow={setShow}
             />
           ))}
         </div>
-        <div className="right">
-          <div className="contain">
-            <span>Songs</span>
-            <span className="right-align">Album</span>
+        <div className={show === "show" ? "hide" : "show"}>
+          <div className="music-typewriter-container">
+            <div className="artist-typewriter">
+              <Typewriter 
+                onInit={(typewriter) => {
+                typewriter.typeString('Songs').start()
+              }}
+            />
+            </div>
           </div>
+          <ul>
           {handleTracks.map((track) => (
             <TrackList key={track.id} track={track} setPlayMe={setPlayMe} />
           ))}
+          </ul>
         </div>
       </div>
     </div>

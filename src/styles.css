@@ -155,7 +155,6 @@ body {
 .input-form{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-
     border-style: solid;
     border-radius: 7px;
     border-color: white;
@@ -181,6 +180,7 @@ body {
 }
 
 .input-button{
+    
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     border-style: solid;
@@ -203,8 +203,23 @@ body {
     color: black;
     background-color: #66FF66;
     box-shadow: 0px 0px 15px #66FF66;
-
 }
+
+.save-form-left{
+    width: 50%;
+    min-height: 124px;
+    padding-right: 25%;
+    float: left;
+}
+
+.save-form-right{
+    width: 50%;
+    min-height: 124px;
+    padding-top: 13px;
+    padding-left: 27%;
+    float: right;
+}
+
 
 .nav {
     background-color: black;
@@ -264,22 +279,13 @@ body {
     row-gap: 20px;  
 }
 
-.left {
-    width: 17%;
-    min-height: 500px;
-    float: left;
-    color: rgb(99, 99, 99);
-}
-
-.right {
-    width: 75%;
-    float: inline-end;
-    color: rgb(99, 99, 99);
-}
-
-.right-align {
-    float: right;
-    color: rgb(99, 99, 99);
+.contain-save {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    margin-top: 70px;    
+    row-gap: 20px;  
 }
 
 .saved-music-card {
@@ -321,7 +327,7 @@ body {
     margin-top: 10px;
     background-color: black;
     color: white;
-    margin: 2.5px;
+    margin-right: 10px;
     cursor: pointer;
     padding: 7px;
     transition: .3s linear;
@@ -331,7 +337,21 @@ body {
 .card-buttons:hover{
     color: black;
     background-color: #66FF66;
-    box-shadow: 0px 0px 35px #66FF66;
+    box-shadow: 0px 0px 35px rgb(102, 255, 102);
+}
+
+.music-card{
+    color: white;
+    border-style: solid;
+    border-radius: 7px;
+    border-width: 4px;
+    border-color: white;
+    background-color: rgba(0,0,0, .8); /* Black w/opacity/see-through */
+    padding-bottom: 2.5px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 15px;
+    
 }
 
 .music-card-image{
@@ -343,6 +363,29 @@ body {
     transition: .3s linear;
 
 } 
+
+.show {
+    text-align:center;
+    
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    min-height: 900px;
+    /* background-color: aqua; */
+    background-image: url("https://thumbs.gfycat.com/AnimatedPoliticalEider-max-1mb.gif");
+    color: rgb(99, 99, 99);
+}
+.artist-typewriter{
+    margin-bottom: 35px;
+}
+
+.hide {
+    display: none;
+}
+
+.right-align {
+    float: right;
+    color: rgb(99, 99, 99);
+}
 
 .music-card-image:hover{
     box-shadow: 0px 0px 10px #66FF66;
@@ -365,4 +408,85 @@ body {
 }
 .bold-name-title{
     color: #66FF66;
+}
+
+.get-songs-button{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: white;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    cursor: pointer;
+    padding: 7px;
+}
+
+.get-songs-button:hover{
+    color: black;
+    background-color: #66FF66;
+    box-shadow: 0px 0px 35px rgb(102, 255, 102);
+}
+
+.artist-img{
+    box-shadow: 0px 0px 10px #66FF66;
+    overflow: hidden;
+    transition: transform .5s ease;
+}
+
+.artist-img:hover{
+    transform:scale(1.2);
+}
+
+.music-list-item{
+    align-items: stretch;
+    row-gap: 20px;
+    text-shadow: 1px 1px 2px black;
+    border-style: solid;
+    border-color: white; 
+    border-radius: 6px; 
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-bottom: 2px;
+    margin-top: 10px;
+    color: white;
+    background-color: rgba(214, 214, 214, 0.8);
+    list-style-type: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-height: 150px;
+}
+
+.music-list-item span {
+    margin-right: 30px;
+    margin-top: 45%;
+}
+
+.music-list-item button{
+    margin-top: 45px;
+}
+
+.music-list-item:hover{
+    font-size: 20px;
+    background-color: rgb(102, 255, 102, .8);
+    box-shadow: 0px 0px 35px #66FF66;
+}
+/* .music-list-item:hover img{
+    width: 10%;
+    height: 10%;
+} */
+
+.music-list-item img{
+    
+    float: left;   
+    margin-top: 8.5px;
+    /* padding:25px; */
+    margin-left: 90px;
+}
+
+.star {
+    height: 20px;
 }

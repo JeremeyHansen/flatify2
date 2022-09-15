@@ -1,9 +1,11 @@
 import SavedMusicCard from "./SavedMusicCard";
+import Playlists from "./Playlists";
 import {useState, useEffect} from "react";
-import Typewriter from 'typewriter-effect'
+import Typewriter from 'typewriter-effect';
 
-function SavedMusic({ setPlayMe }) {
+function SavedMusic({ token, setPlayMe }) {
   const [savedMusicArray, setSavedMusicArray] = useState([]);
+  const [songAdd, setSongAdd] = useState("");
 
   useEffect(()=> {
       fetch("http://localhost:3001/artists")
@@ -27,8 +29,11 @@ function SavedMusic({ setPlayMe }) {
         return 0;
   });
 
-  return (
+   return (
     <div className="saved-music-container">
+      <div>
+        <Playlists token={token} setPlayMe={setPlayMe} songAdd={songAdd} setSavedMusicArray={setSavedMusicArray} />
+      </div>
       <div className="saved-music-typewriter-container">
         <Typewriter
           onInit={(typewriter) => {
@@ -36,11 +41,12 @@ function SavedMusic({ setPlayMe }) {
           }}
         />
       </div>
-      <ul className="contain">
+      <ul className="contain-save">
               {sortedMusicArray.map((savedArrayItem) => 
           <SavedMusicCard 
             key={savedArrayItem.id} 
             savedArrayItem={savedArrayItem} 
+            setSongAdd={setSongAdd}
             setPlayMe={setPlayMe} 
             handleDelete={handleDelete}
           />

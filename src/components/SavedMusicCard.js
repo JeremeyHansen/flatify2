@@ -1,11 +1,32 @@
+import star from '../star.png';
+import starFull from '../starFull.png';
+import { useState } from 'react';
 
-function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
+function SavedMusicCard({savedArrayItem, setSongAdd, setPlayMe, handleDelete}) {
+    const [toggle, setToggle] = useState(savedArrayItem.like);
+
     function onSong() {
         setPlayMe(savedArrayItem.uri)
     }
 
     function onAlbum() {
         setPlayMe(savedArrayItem.album_uri)
+    }
+
+    function onLike() {
+        console.log(toggle)
+        let state = !toggle;
+        fetch(`http://localhost:3001/artists/${savedArrayItem.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                like: state,
+            }),
+        })
+            .then(res => res.json())
+            .then(data => setToggle(data.like));
     }
 
     function onDelete() {
@@ -19,10 +40,16 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
             .then(() => handleDelete(savedArrayItem.id))
     }
 
+    function onAdd() {
+        setSongAdd(savedArrayItem.uri)
+    }
+
     return(
         <li className="saved-music-card">
             <div className="image-wrapper">
             <img className="music-card-image" src={savedArrayItem.image}/>
+            <br></br>
+            <button className="card-buttons" onClick={onAdd} >add to playlist</button>
             </div>
             <p className="bold-name"><span className="bold-name-title" >Song: </span>{savedArrayItem.track} </p>
             <p><span className="bold-text">Artist:</span> {savedArrayItem.artist}</p>
@@ -30,6 +57,7 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
             <button className="card-buttons" onClick={onSong}>Play Song</button>
             <button className="card-buttons" onClick={onAlbum}>Play Album</button>
             <button className="card-buttons" onClick={onDelete}>Delete Song</button>
+            <img className="star" src={toggle ? starFull : star} onClick={onLike}></img>
         </li>
     )
 }

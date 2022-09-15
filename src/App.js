@@ -39,18 +39,18 @@ function App() {
     window.localStorage.removeItem("token");
   };
 
-  useEffect(() => setPlayMe('spotify:track:6ZFbXIJkuI1dVNWvzJzown'),[])
+  // useEffect(() => setPlayMe('spotify:track:6ZFbXIJkuI1dVNWvzJzown'),[])
 
   return (
     <>
       <Navbar />
       <div className="button-div">
         {!userToken ? (
-          <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-modify-playback-state%20user-read-playback-state%20user-read-currently-playing%20app-remote-control%20streaming%20user-read-email%20user-read-private%20user-library-modify%20user-library-read`}>
-            <button className="login-button">Login</button>
+          <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-modify-playback-state%20user-read-playback-state%20user-read-currently-playing%20app-remote-control%20streaming%20user-read-email%20user-read-private%20user-library-modify%20user-library-read%20playlist-read-collaborative%20playlist-modify-public%20playlist-read-private%20playlist-modify-private`}>
+            <button className="login-button">Connect</button>
           </a>
         ) : (
-          <button className="login-button" onClick={logout}>Logout</button>
+          <button className="login-button" onClick={logout}>Disconnect</button>
         )}
       </div>
       <Player token={userToken} trackUri={playMe} />
@@ -59,7 +59,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/About" element={<About />}></Route>
           <Route path="/Music" element={<Music token={userToken} setPlayMe={setPlayMe} />}></Route>
-          <Route path="/SavedMusic" element={<SavedMusic setPlayMe={setPlayMe} />}></Route>
+          <Route path="/SavedMusic" element={<SavedMusic token={userToken} setPlayMe={setPlayMe} />}></Route>
         </Routes>
       </div>
     </>
