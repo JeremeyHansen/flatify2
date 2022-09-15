@@ -2,7 +2,7 @@ import star from '../star.png';
 import starFull from '../starFull.png';
 import { useState } from 'react';
 
-function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
+function SavedMusicCard({savedArrayItem, setSongAdd, setPlayMe, handleDelete}) {
     const [toggle, setToggle] = useState(savedArrayItem.like);
 
     function onSong() {
@@ -27,7 +27,6 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
         })
             .then(res => res.json())
             .then(data => setToggle(data.like));
-
     }
 
     function onDelete() {
@@ -41,9 +40,15 @@ function SavedMusicCard({savedArrayItem, setPlayMe, handleDelete}) {
             .then(() => handleDelete(savedArrayItem.id))
     }
 
+    function onAdd() {
+        setSongAdd(savedArrayItem.uri)
+    }
+
     return(
         <li className="saved-music-card">
             <img className="music-card-image" src={savedArrayItem.image}/>
+            <br></br>
+            <button className="card-buttons" onClick={onAdd} >add to playlist</button>
             <p className="bold-name"><span className="bold-name-title" >Song: </span>{savedArrayItem.track} </p>
             <p><span className="bold-text">Artist:</span> {savedArrayItem.artist}</p>
             <p className="ellipsis"><span className="bold-text">Album:</span> {savedArrayItem.album} </p>

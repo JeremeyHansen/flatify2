@@ -2,7 +2,6 @@ import React from "react";
 import SpotifyPlayer from 'react-spotify-web-playback';
 
 function Player({ token, trackUri }){
-
     return(
         <SpotifyPlayer
             token={token}
