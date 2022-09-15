@@ -1,37 +1,32 @@
 {
   "artists": [
     {
-      "id": "3RAFcUBrCNaboRXoP3S5t1",
-      "track": "Psychosocial",
-      "uri": "spotify:track:3RAFcUBrCNaboRXoP3S5t1",
-      "album": "All Hope Is Gone (10th Anniversary)",
-      "image": "https://i.scdn.co/image/ab67616d00004851e7fbc0883149094912559f2c",
-      "album_uri": "spotify:album:2ISXjEm0D4chvU2IDNvUqk",
-      "artist": "Slipknot",
-      "artist_id": "05fG473iIaoy82BF1aGhL8",
-      "artist_uri": "spotify:artist:05fG473iIaoy82BF1aGhL8"
+       "id": "3VqHuw0wFlIHcIPWkhIbdQ",
+      "track": "Enter Sandman (Remastered)",
+      "uri": "spotify:track:3VqHuw0wFlIHcIPWkhIbdQ",
+      "album": "Metallica (Remastered)",
+      "image": "https://i.scdn.co/image/ab67616d000048511f9edf15e43f4c2f4938b869",
+      "album_uri": "spotify:album:55fq75UfkYbGMq4CncCtOH",
+      "artist": "Metallica",
+      "artist_id": "2ye2Wgw4gimLv2eAKyk1NB",
+      "artist_uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB",
+      "track_length": 331560,
+      "explicit": false,
+      "popularity": 77
     },
     {
-      "id": "3iXNlPQNYPrtimAEM49PsG",
-      "track": "Pump It",
-      "uri": "spotify:track:3iXNlPQNYPrtimAEM49PsG",
-      "album": "Pump It",
-      "image": "https://i.scdn.co/image/ab67616d000048517cefe3aed1a7a3422d5875a6",
-      "album_uri": "spotify:album:2sHDtHAX8luZbP4Uugvtds",
-      "artist": "Electric Callboy",
-      "artist_id": "1WNoKxsp715jez1Td4vthc",
-      "artist_uri": "spotify:artist:1WNoKxsp715jez1Td4vthc"
-    },
-    {
-      "id": "1wkPPdTyD9nzDtHZPXiDyB",
-      "track": "Never Enough",
-      "uri": "spotify:track:1wkPPdTyD9nzDtHZPXiDyB",
-      "album": "Blood Spills Not Far From The Wound",
-      "image": "https://i.scdn.co/image/ab67616d00004851fd52933962fe8a2555897885",
-      "album_uri": "spotify:album:4a3ZQtHUomdxx1ZvZgaOJS",
-      "artist": "Aesthetic Perfection",
-      "artist_id": "1Jgp0YCPHCJx5XD7nlfGVN",
-      "artist_uri": "spotify:artist:1Jgp0YCPHCJx5XD7nlfGVN"
+      "id": "1pr9TZGOXeJUggIal1Wq3R",
+      "track": "Blind",
+      "uri": "spotify:track:1pr9TZGOXeJUggIal1Wq3R",
+      "album": "Korn",
+      "image": "https://i.scdn.co/image/ab67616d000048517153b1cf6ee990c2a9fa46cc",
+      "album_uri": "spotify:album:7D3XFJlfZIkmGWqZXm2X8z",
+      "artist": "Korn",
+      "artist_id": "3RNrq3jvMZxD9ZyoOZbQOD",
+      "artist_uri": "spotify:artist:3RNrq3jvMZxD9ZyoOZbQOD",
+      "track_length": 258266,
+      "explicit": false,
+      "popularity": 68
     }
   ]
 }
